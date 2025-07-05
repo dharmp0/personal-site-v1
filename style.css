@@ -1,0 +1,12 @@
+p {
+    color: red;
+}
+
+a:visited {
+  color: blue;
+}
+
+
+a:link, a:visited {
+  text-decoration: none;
+}
