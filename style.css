@@ -1,22 +1,45 @@
+
+/*space added so scroll bar dosent cover part of the sections and smooth scrolling to sections*/
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 70px;
   scroll-behavior: smooth;
 }
 
+/* set width and heigh of page, hides overflow meaning text out of screen isnt shown so no horizontal scroll bar,
+set background color, and general font family */
 body {
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    background-color: #e0ecff; 
-    color: #1f2937;            
+    background-color: #e0ecff;     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav{
-    width: 100%;
-    height: 80px;
+/*add padding to left */
+.logo {
+    padding-left: 20px;
 }
-    
+
+/*style name with font,size,weight,colour, letter spacing, and transition for hover effect*/
+.logo span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(to right, #60a5fa, #2563eb); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+/*hover effect for logo, moves it up and scales it slightly*/
+.logo span:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/*froze nav bar to the top of the page, set width and height, display flex to align items, justify content to space between logo and nav bar, background color, text color, box shadow for depth, and z-index to keep it on top of other elements*/
 .nav-container {   
     position: fixed;
     top: 0;
@@ -27,23 +50,13 @@ nav{
     justify-content: space-between;
     background: linear-gradient(to bottom, #ffffff, #e0ecff);
     color: #1f2937;    
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow */
     align-items: center;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);           
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);           
 }
 
-.logo{
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-    padding-left: 20px;
-}
 
-.logo span{
-    color: black;   
-}
-
+/*style nav bar, display flex to align items, gap between items, padding on right, font family, weight, and size*/
 .nav-bar{
     display: flex;
     gap: 25px;
@@ -53,52 +66,106 @@ nav{
     font-size: 1.1rem;
 }
 
+/*adding letter spacing*/
 .nav-bar a{
     letter-spacing: 1px;
 }
 
-.link a{
+/*styling the nav-bar section links, removing underline, making sure the transitions i apply to them later are smooth*/
+.link a {
+    position: relative;
     text-decoration: none;
     font-weight: 600;
     color: #1f2937;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
-.link:hover a,
+/*hover effect for nav-bar links, changes color and moves it up slightly*/
+.link a:hover,
 .link a.active {
     color: #3b82f6;
+    transform: translateY(-2px) scale(1.10); 
 }
 
+/*active link effect, changes color and adds a line below it*/
+.link a.active::after {
+    background-color: #3b82f6;
+    width: 70%; 
+}
+
+/*line below the link, position absolute to place it below the text, centered, width 0% by default, height 2px, background color transparent, and transition for smooth effect*/
+.link a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* general section styling, min-height to fill the screen, padding for spacing*/
 section {
     min-height: 100vh;
     padding: 10px 20px 20px 40px;
 }
 
+/*general font color for headings*/
+h1, h2, h3, h4, h5 {
+    color: #1f2937;
+}
+
+/*general font color, size, and line height for paragraphs and list items*/
+p, li {
+    color: #1f2937;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/*center text, limit paragraph width,adjust margin, and padding for the About section*/
+#About {
+  text-align: center;
+  max-width: 800px;
+  margin: 100px auto 0 auto; 
+  padding: 0 20px;
+}
+
+/*style the About section heading, font size, weight, margin bottom for spacing, and color*/
+#About h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/*style the About section paragraph, font size, line height for readability, and color*/
+#About p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/*set container of the socials section to flex and add gap between items*/
 .socials {
     display: flex;                
     gap: 20px;                    
 }
 
+
+/*style the social media icons, display inline-block, font size, color, set transition for smoothhover effect, and cursor pointer*/
 .socials a {
-    display: inline-block;
+    display: incline-block;
     font-size: 28px;
     color: indianred;
     transition: color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
+/*hover effect for social media icons, changes color and moves it up slightly*/
 .socials a:hover {
     color: #3b82f6;        
     transform: translateY(-2px); 
-}
-
-
-h1, h2, h3, h4, h5 {
-    color: #1f2937;
-}
-
-p, li {
-    color: #1f2937;
-    font-size: 1rem;
-    line-height: 1.6;
 }
