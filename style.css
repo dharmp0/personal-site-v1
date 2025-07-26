@@ -7,25 +7,30 @@ body {
     width: 100%;
     height: auto;
     overflow-x: hidden;
+    background-color: #f4faff; /* Very light blue background */
+    color: #1f2937;            /* Slate gray for all text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav{
     width: 100%;
     height: 80px;
 }
-
+    
 .nav-container {   
-  position: fixed;
-  top: 0;
-  left: 0;                  
-  width: 100%;
-  height: 80px;             
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  align-items: center;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);           
+    position: fixed;
+    top: 0;
+    left: 0;                  
+    width: 100%;
+    height: 80px;             
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff; /* White nav bar for clean separation */
+    color: #1f2937;    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);           
 }
 
 .logo{
@@ -36,7 +41,7 @@ nav{
 }
 
 .logo span{
-    color: lightskyblue;   
+    color: black;   
 }
 
 .nav-bar{
@@ -53,19 +58,15 @@ nav{
 }
 
 .link a{
-    text-decoration: none;   /* removing underline */
-    font-weight: 500;        /* how thick the charcters are */
-    color: black;
-    transition: color 0.2s ease; /*color changes smoothly */
-
+    text-decoration: none;
+    font-weight: 600;
+    color: #1f2937;
+    transition: color 0.2s ease;
 }
 
-.link:hover a{
-    color: lightskyblue
-}
-
+.link:hover a,
 .link a.active {
-    color: lightskyblue;
+    color: #3b82f6;
 }
 
 section {
@@ -81,13 +82,23 @@ section {
 .socials a {
     display: inline-block;
     font-size: 28px;
-    color: violet;
+    color: indianred;
     transition: color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
 .socials a:hover {
-    color: lightskyblue;        
+    color: #3b82f6;        
     transform: translateY(-2px); 
 }
 
+
+h1, h2, h3, h4, h5 {
+    color: #1f2937;
+}
+
+p, li {
+    color: #1f2937;
+    font-size: 1rem;
+    line-height: 1.6;
+}
