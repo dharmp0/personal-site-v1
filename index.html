@@ -11,7 +11,7 @@
     <link rel ="stylesheet" href = "style.css">
 </head>
 <body>
-
+<div class="main container">
 <!--navbar-->
 <nav>
     <div class = "nav-container">
@@ -28,11 +28,12 @@
 
 <!--Content-->
 <section id="About">
-    <hr style="width: 50px; border: 2px solid #60a5fa; border-radius: 10px;">
-    <h2>Hey, I'm Dharm! &#128075;</h2>
-    <p>
-        I'm an aspiring Software Engineer currently a junior pursing a Computer Science and Buisness Administration double-degree at Wilfrid Laurier University. I enjoy diving into new projects, meeting new people, and going to the gym. 
+  <div class="about-container">
+    <h1 class="intro-heading">Hey, I'm <span class="typing" id="typing-text"></span></h1>
+    <p class="about-text">
+       I'm a junior at Wilfrid Laurier University pursuing a double degree in Computer Science and Business Administration, with a strong passion for building software that solves real problems. I’ve gained hands-on <a href = "#Experience">experience</a> working as a Software Engineer Intern at Riipen and as a Strategic Marketing Analyst at an AI startup, and I’m always exploring new technologies and creative <a href="#Projects">projects</a>. Outside of coding, you’ll find me at the gym, watching or playing basketball, trying new food spots, meeting new people, or planning my next trip. I also value <a href=#Contact>connecting</a> with others, whether that means collaborating on code or meeting new people, so feel free to reach out!
     </p>
+    </div>
 </section>
 
 <section id="Projects">
@@ -72,7 +73,7 @@
     <h2>Work Experience</h2>
 
     <div class="jobs">
-        <strong>Business Development Representative</strong>
+        <strong>Business Development Representative - Sentia</strong>
         <ul>
             <li>Gained technical sales experience by joining 20+ client discovery calls, learning how cloud, cybersecurity, and virtualization solutions were positioned to address real business problems.</li>
             <li>Achieved 45% open rates and 12% reply rates by targeting 1,000+ accounts across cloud, cybersecurity, and infrastructure through tailored outreach campaigns using HubSpot and ZoomInfo.</li>
@@ -81,7 +82,7 @@
     </div>
 
     <div class="jobs">
-        <strong>Strategic Marketing Analyst</strong>
+        <strong>Strategic Marketing Analyst - Learning Mode AI</strong>
         <ul>
             <li>Improved social media ad ROI by conducting research on paid ads and SEM strategies, leading to a 30% reallocation of the marketing budget toward higher-performing channels. </li>
             <li>Increased email open rates by 15% and click-through rates by 10% by designing professional templates in Canva and executing targeted outreach campaigns through HubSpot. </li>
@@ -90,7 +91,7 @@
     </div>
 
     <div class="jobs">
-        <strong>Software Engineer Intern</strong>
+        <strong>Software Engineer Intern - Riipen</strong>
         <ul>
             <li> Delivered 3 client web projects by developing responsive, conversion-optimized landing pages and integrated lead generation forms using HTML, CSS, and JavaScript.</li>
             <li>Reduced manual performance checks by 40% and improved issue response time by 25% by building an internal dashboard using JavaScript and Chart.js to visualize API latency, query efficiency, and user engagement metrics.</li>
@@ -147,6 +148,7 @@
     <a href="mailto:dharmpat@outlook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i></a>
     </div>
 </section>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
