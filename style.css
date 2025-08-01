@@ -5,12 +5,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.main-container {
-  max-width: 800px;  /* optional: keeps things readable on big screens */
-  margin: 0 auto;     /* centers the container */
-  padding: 0 40px;     /* horizontal padding for left & right spacing */
-}
-
 /* set width and heigh of page, hides overflow meaning text out of screen isnt shown so no horizontal scroll bar,
 set background color, and general font family */
 body {
@@ -21,21 +15,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*add padding to left */
-.logo {
-    padding-left: 20px;
-}
-
 /*style name with font,size,weight,colour, letter spacing, and transition for hover effect*/
 .logo span {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    background: linear-gradient(to right, #60a5fa, #2563eb); 
+    background: linear-gradient(to bottom, #60a5fa, #2563eb); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
     display: inline-block;
+    padding-left: 50pt;
     transition: transform 0.3s ease;
     cursor: default;
 }
@@ -51,25 +41,28 @@ body {
     top: 0;
     left: 0;                  
     width: 100%;
-    height: 80px;             
+    height: 80px;
+    margin: 0 auto;         /* Centers the container */             
     display: flex;
     justify-content: space-between;
     background: linear-gradient(to bottom, #ffffff, #e0ecff);
     color: #1f2937;    
     align-items: center;
     z-index: 1000;
-    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);           
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 
 /*style nav bar, display flex to align items, gap between items, padding on right, font family, weight, and size*/
 .nav-bar{
     display: flex;
+    padding-right: 50pt;
     gap: 25px;
-    padding-right: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800px;
     font-size: 1.1rem;
+    
 }
 
 /*adding letter spacing*/
@@ -135,7 +128,7 @@ p, li {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  padding: 100px
+  padding: 170px;
 }
 
 .intro-heading {
@@ -153,9 +146,11 @@ p, li {
 }
 
 .about-text {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #374151;
+    font-size: 1.05rem;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    line-height: 1.7;
+    color: #374151;
 }
 
 .about-text a {
