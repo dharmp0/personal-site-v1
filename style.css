@@ -15,6 +15,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /*style name with font,size,weight,colour, letter spacing, and transition for hover effect*/
 .logo span {
     font-family: 'Poppins', sans-serif;
@@ -243,58 +250,79 @@ p, li {
     margin: 0 auto;
 }
 
+
 .cert-img {
     margin-top: 1rem; 
 }
 
 .cert-img img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
-.clickable-cert {
-  cursor: pointer;
+#Certifications{
+    padding-bottom: 0px;
 }
 
 /* Modal container */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
 }
 
 /* The image inside the modal */
 .modal-content {
-  display: block;
-  margin: auto;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 /* Close button */
 .close {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .close:hover {
-  color: #ccc;
+    color: #ccc;
+}
+
+/* Footer styling */
+.site-footer {
+    background-color: #1f2937; /* dark gray-blue */
+    color: #f3f4f6;            /* light gray text */
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 0.7rem;
+    color: inherit;
+    margin: 0;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
