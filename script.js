@@ -38,3 +38,20 @@ function erase() {
 document.addEventListener("DOMContentLoaded", () => {
   type();
 });
+
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("certModalImg");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".clickable-cert").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = () => modal.style.display = "none";
+
+window.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
