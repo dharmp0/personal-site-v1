@@ -141,10 +141,10 @@ p, li {
 
 /*about section*/
 .about-container {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     text-align: center;
-    padding: 170px;
+    padding-top: 170px;
 }
 
 .intro-heading {
@@ -352,14 +352,10 @@ p, li {
     margin-bottom: 0;
     }
 
-.site-footer {
-    margin-top: 0;
-    }
-
 /* Footer styling */
 .site-footer {
-    background-color: #1f2937; /* dark gray-blue */
-    color: #f3f4f6;            /* light gray text */
+    background-color: #1f2937; 
+    color: #f3f4f6;          
     padding: 1rem 1rem;
     text-align: center;
 }

@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   type();
 });
 
+
+// for modal image display
 const modal = document.getElementById("certModal");
 const modalImg = document.getElementById("certModalImg");
 const closeBtn = document.querySelector(".close");
@@ -55,3 +57,40 @@ closeBtn.onclick = () => modal.style.display = "none";
 window.onclick = (e) => {
   if (e.target === modal) modal.style.display = "none";
 };
+
+
+// for active section highlighting on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-bar .link a');
+let isUserScrolling = false;
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+  isUserScrolling = true;
+
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    isUserScrolling = false;
+    highlightCurrentSection(); 
+  }, 100); 
+});
+
+function highlightCurrentSection() {
+    let currentSectionId = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (window.scrollY >= sectionTop - sectionHeight / 3) {
+      currentSectionId = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSectionId}`) {
+      link.classList.add('active');
+    }
+  });
+}
