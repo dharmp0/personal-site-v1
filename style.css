@@ -1,7 +1,7 @@
 
 /*space added so scroll bar dosent cover part of the sections and smooth scrolling to sections*/
 html {
-  scroll-padding-top: 60px;
+  scroll-padding-top: 4vw;
   scroll-behavior: smooth;
 }
 
@@ -30,7 +30,7 @@ html, body {
     -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
     display: inline-block;
-    padding-left: 50pt;
+    padding-left: 4vw;
     transition: transform 0.3s ease;
     cursor: default;
 }
@@ -62,7 +62,7 @@ html, body {
 /*style nav bar, display flex to align items, gap between items, padding on right, font family, weight, and size*/
 .nav-bar{
     display: flex;
-    padding-right: 50pt;
+    padding-right: 4vw;
     gap: 30px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800px;
@@ -141,10 +141,10 @@ p, li {
 
 /*about section*/
 .about-container {
-    max-width: 550px;
+    max-width: 35%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 170px;
+    padding-top: 8vw;
 }
 
 .intro-heading {
@@ -175,6 +175,7 @@ p, li {
     font-style: italic;
     position: relative;
 }
+
 
 /*set container of the socials section to flex and add gap between items*/
 .socials {
@@ -280,6 +281,9 @@ p, li {
     font-weight: 500;
 }
 
+#Experience{
+    padding-bottom: 5vh;
+}
 
 /*certifications section*/
 .cert {
