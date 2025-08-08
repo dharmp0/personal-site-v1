@@ -442,7 +442,11 @@ p, li {
         max-width: 300px;
         margin: 0 auto;
         text-align: left;
-        padding-top: 30px;
+        padding-top: 10px;
+    }
+
+    .intro-heading {
+        font-size: 2.5rem;
     }
 
     .intro-heading .typing {
@@ -489,5 +493,17 @@ p, li {
         padding-bottom: 100px;
     }
 
-    
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 80px;
+    }
+
+    .copyright{
+        grid-column: 1;
+    }
+
+    .top{
+        grid-column: 2;
+    }
+
 }
