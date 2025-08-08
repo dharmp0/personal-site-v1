@@ -8,7 +8,7 @@ links.forEach(link => {
   });
 });
 
-// for typing effect
+/* for typing effect */
 const roles = ["Dharm!", "an Engineer!", "a Student!"];
 let currentIndex = 0;
 let charIndex = 0;
