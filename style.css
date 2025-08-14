@@ -399,7 +399,7 @@ p, li {
 
 /*breakpoints*/
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {  
 
     .about-container {
         max-width: 600px;
@@ -418,6 +418,34 @@ p, li {
         text-align: center;
         padding-top: 8rem;
     }
+
+    ul li {
+        margin-bottom: 15px; 
+    }
+
+    .timeline {
+        grid-template-columns: 1fr; 
+    }
+
+    .timeline__middle {
+        display: none; /
+    }
+
+    .timeline__component {
+        margin: 0 0 2em 0;
+    }
+
+    .timeline__component--bg {
+        padding: 1em; 
+    }
+
+    .timeline__date--right {
+        text-align: left;
+    }
+    
+    .timeline__component:nth-child(4) { order: 3; }
+    .timeline__component:nth-child(6) { order: 4; } 
+    .timeline__component:nth-child(9) { order: 6; }
 
 }
 
