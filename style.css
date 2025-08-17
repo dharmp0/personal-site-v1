@@ -171,6 +171,13 @@ p, li {
     font-weight: bold;
     font-style: italic;
     position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-text a:hover {
+    color: #2563eb;
+    transform: translateY(-3px); 
 }
 
 
