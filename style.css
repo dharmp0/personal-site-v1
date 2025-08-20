@@ -1,8 +1,8 @@
 
 /*space added so scroll bar dosent cover part of the sections and smooth scrolling to sections*/
 html {
-  scroll-padding-top: 3rem;
-  scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    scroll-behavior: smooth;
 }
 
 /* set width and heigh of page, hides overflow meaning text out of screen isnt shown so no horizontal scroll bar,
@@ -16,8 +16,8 @@ body {
 }
 
 html, body {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /*style name with font,size,weight,colour, letter spacing, and transition for hover effect*/
@@ -216,11 +216,11 @@ p, li {
 }
 
 .projects h3 {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .projects h3 + p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 
