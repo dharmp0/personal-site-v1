@@ -40,23 +40,36 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// for modal image display
-const modal = document.getElementById("certModal");
-const modalImg = document.getElementById("certModalImg");
-const closeBtn = document.querySelector(".close");
+// Certifications carousel
+let currentCertIndex = 1;
+const certImages = [
+    "images/JPMC-Cert-1.png",
+    "images/Microsoft-Azure-Cert-1.png", 
+    "images/Fortinet-Cert-1.png"
+];
 
-document.querySelectorAll(".clickable-cert").forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "block";
-    modalImg.src = img.src;
-  });
-});
+function changeCert(direction) {
+    currentCertIndex += direction;
+    if (currentCertIndex > certImages.length) currentCertIndex = 1;
+    if (currentCertIndex < 1) currentCertIndex = certImages.length;
+    
+    document.getElementById("certImage").src = certImages[currentCertIndex - 1];
+    
+    // Update dots
+    document.querySelectorAll(".dot").forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentCertIndex - 1);
+    });
+}
 
-closeBtn.onclick = () => modal.style.display = "none";
-
-window.onclick = (e) => {
-  if (e.target === modal) modal.style.display = "none";
-};
+function currentCert(index) {
+    currentCertIndex = index;
+    document.getElementById("certImage").src = certImages[currentCertIndex - 1];
+    
+    // Update dots
+    document.querySelectorAll(".dot").forEach((dot, dotIndex) => {
+        dot.classList.toggle("active", dotIndex === currentCertIndex - 1);
+    });
+}
 
 
 // for active section highlighting on scroll
