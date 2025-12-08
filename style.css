@@ -182,12 +182,32 @@ section h2 {
     flex-grow: 1;
 }
 
+.exp-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
 .exp-title h3 {
     font-size: 1.1rem;
     font-weight: 600;
     color: #1a202c;
-    margin-bottom: 0.5rem;
     line-height: 1.4;
+    flex: 1;
+}
+
+.exp-company {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #667eea;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    background: transparent;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    white-space: nowrap;
 }
 
 .exp-date {

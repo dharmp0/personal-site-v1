@@ -9,7 +9,7 @@ links.forEach(link => {
 });
 
 /* for typing effect */
-const roles = ["Dharm!", "an Engineer!", "a Student!"];
+const roles = ["Dharm!", "a Developer!", "a Student!"];
 let currentIndex = 0;
 let charIndex = 0;
 const typingText = document.getElementById("typing-text");
