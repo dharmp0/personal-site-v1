@@ -1,6 +1,43 @@
 // for active section of nav-bar
 const links = document.querySelectorAll('.nav-bar .link a');
 
+// light/dark mode toggle
+const THEME_STORAGE_KEY = 'theme';
+const themeToggleButton = document.getElementById('theme-toggle');
+
+function getPreferredTheme() {
+  const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  if (storedTheme === 'light' || storedTheme === 'dark') return storedTheme;
+
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDark ? 'dark' : 'light';
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  if (document.body) {
+    document.body.dataset.theme = theme;
+    document.body.classList.toggle('theme-dark', theme === 'dark');
+    document.body.classList.toggle('theme-light', theme === 'light');
+  }
+
+  if (!themeToggleButton) return;
+
+  const isDark = theme === 'dark';
+  themeToggleButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  themeToggleButton.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  themeToggleButton.innerHTML = isDark
+    ? '<i class="fa-solid fa-sun" aria-hidden="true"></i>'
+    : '<i class="fa-solid fa-moon" aria-hidden="true"></i>';
+}
+
+function toggleTheme() {
+  const current = document.documentElement.dataset.theme || 'light';
+  const next = current === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(THEME_STORAGE_KEY, next);
+  setTheme(next);
+}
+
 links.forEach(link => {
   link.addEventListener('click', () => {
     links.forEach(l => l.classList.remove('active'));
@@ -36,6 +73,10 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  setTheme(getPreferredTheme());
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener('click', toggleTheme);
+  }
   type();
 });
 
