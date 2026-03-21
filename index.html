@@ -1,333 +1,72 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="auther" content="Dharm Patel">
-    <meta name="description" content="This webpage is Dharm's personal portfolio, containing his past exerpeinces, projects, and his contact information.">
-    <title>Dharm's Portfolio</title>
+    <meta name="author" content="Dharm Patel">
+    <meta name="description" content="Dharm Patel - CS & BBA student at Wilfrid Laurier University. Software engineering, projects, and experience.">
+    <title>Dharm Patel</title>
     <link rel="icon" href="./images/website_icon.webp">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel ="stylesheet" href = "./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<!--navbar-->
-<nav>
-    <div class = "nav-container">
-        <div class = "logo"><span>Dharm</span></div>
-        <div class = "nav-bar">
-            <div class = "link"> <a href="#About" class = "active">About</a></div>
-            <div class = "link"> <a href="#Experience">Experience</a></div>
-            <div class = "link"> <a href="#Projects">Projects</a></div>
-            <div class = "link"> <a href="#Certifications">Certifications</a></div>
-        </div>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-            <i class="fa-solid fa-moon" aria-hidden="true"></i>
-        </button>
-    </div>  
-</nav>
+<div class="container">
 
-<!--Content-->
-<section id="About">
-    <div class="about-container">
-        
-        <h1 class="intro-heading">Hey, I'm <span class="typing" id="typing-text"></span></h1>
-        
-        <div class="about-text">
+    <header>
+        <div class="header-name">Dharm Patel</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
 
-            <p>I'm a junior at Wilfrid Laurier University pursuing a double degree in Computer Science and Business Administration, gaining hands-on <a href="#Experience">experience</a> across both technology and business.</p>
-            
-            <p>I’m currently a Software Engineering Intern at Manulife, focused on building backend systems for internal platforms. I've previously worked as a Research Assistant at Wilfrid Laurier University and as a Business Development Representative at Sentia Solutions.</p>
+    <hr>
 
-            <p>I’m constantly working on new <a href="#Projects">projects</a> to apply what I’ve learned, while also expanding my skills and increasing my proficiency in various technologies by pursuing <a href="#Certifications">certifications</a>.</p>
+    <main>
+        <h1>Dharm Patel</h1>
+        <p class="subtitle">CS & BBA @ Wilfrid Laurier University</p>
 
-            <p>Outside of coding, you’ll find me at the gym, watching or playing basketball, trying new food spots, or planning my next trip. I love collaborating on projects and meeting like-minded people, so feel free to reach out!</p>
-        
-        </div>
-        
-        <div class = "socials">
-        
-            <a href="https://www.linkedin.com/in/dharmpatel05/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/dharmp0" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:dharmpat@outlook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i></a>
-        
-        </div>
+        <section class="about">
+            <h2>About Me</h2>
+            <ul>
+                <li>Pursuing a double degree in Computer Science and Business Administration at Wilfrid Laurier University.</li>
+                <li>Currently a Software Engineering Intern at Manulife, building backend systems for internal platforms.</li>
+                <li>Interested in full-stack development, AI/ML, and building things that solve real problems.</li>
+                <li>Outside of coding - gym, basketball, trying new food spots, and planning trips.</li>
+            </ul>
+        </section>
 
-    </div>
-</section>
+        <section class="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li><span class="exp-left"><span class="exp-company">RBC</span> - Software Engineer Intern</span> <em>Incoming Summer 2026</em></li>
+                <li><span class="exp-left"><span class="exp-company">Manulife</span> - Software Engineer Intern</span> <em>Jan 2026 - Present</em></li>
+                <li><span class="exp-left"><span class="exp-company">Wilfrid Laurier University</span> - Research Assistant</span> <em>Sep 2025 - Dec 2025</em></li>
+                <li><span class="exp-left"><span class="exp-company">Sentia Solutions</span> - Business Development Representative</span> <em>May 2025 - Aug 2025</em></li>
+                <li><span class="exp-left"><span class="exp-company">Learning Mode AI</span> - Growth Intern</span> <em>Mar 2025 - May 2025</em></li>
+                <li><span class="exp-left"><span class="exp-company">Riipen</span> - Software Engineer Intern</span> <em>Jan 2024 - Apr 2024</em></li>
+            </ul>
+        </section>
 
-
-
-<section id="Experience">
-    <h2>Experience</h2>
-    <div class="experience-container">
-        <div class="experience-item">
-            <div class="exp-header">
-                <div class="exp-logo">
-                    <img src="images/manulife.png" alt="Manulife Logo">
-                </div>
-                <div class="exp-title">
-                    <div class="exp-title-row">
-                        <h3>Software Engineer Intern</h3>
-                        <div class="exp-company">Manulife</div>
-                    </div>
-                    <div class="exp-date">January 2026 - Present</div>
-                </div>
+        <section class="connect">
+            <h2>Connect</h2>
+            <div class="links">
+                <a href="mailto:dharmpat@outlook.com">email</a>
+                <a href="https://github.com/dharmp0" target="_blank" rel="noopener noreferrer">github</a>
+                <a href="https://www.linkedin.com/in/dharmpatel05/" target="_blank" rel="noopener noreferrer">linkedin</a>
+                <a href="https://x.com/_dharmp" target="_blank" rel="noopener noreferrer">twitter</a>
             </div>
-            <div class="exp-content">
-                <p>Building backend services for AI enabled internal platforms.</p>
-            </div>
-        </div>
+        </section>
+    </main>
 
-        <div class="experience-item">
-            <div class="exp-header">
-                <div class="exp-logo">
-                    <img src="images/laurier.avif" alt="Wilfrid Laurier University Logo">
-                </div>
-                <div class="exp-title">
-                    <div class="exp-title-row">
-                        <h3>Research Assistant</h3>
-                        <div class="exp-company">Wilfrid Laurier University</div>
-                    </div>
-                    <div class="exp-date">September 2025 - December 2025</div>
-                </div>
-            </div>
-            <div class="exp-content">
-                <p>Supported machine learning and LLM research by collating and refining large scale transportation datasets for intelligent transportation systems.</p>
-            </div>
-        </div>
+    <hr>
 
-        <div class="experience-item">
-            <div class="exp-header">
-                <div class="exp-logo">
-                    <img src="images/sentia.svg" alt="Sentia Solutions Logo">
-                </div>
-                <div class="exp-title">
-                    <div class="exp-title-row">
-                        <h3>Business Development Representative</h3>
-                        <div class="exp-company">Sentia Solutions</div>
-                    </div>
-                    <div class="exp-date">May 2025 - August 2025</div>
-                </div>
-            </div>
-            <div class="exp-content">
-                <p>Worked with CRM tools, generated leads, and scheduled meetings with potential clients through cold calling, email campaigns, and social media outreach.</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2026 Dharm Patel</p>
+    </footer>
 
-        <div class="experience-item">
-            <div class="exp-header">
-                <div class="exp-logo">
-                    <img src="images/learningmode.jpg" alt="Learning Mode AI Logo">
-                </div>
-                <div class="exp-title">
-                    <div class="exp-title-row">
-                        <h3>Growth Intern</h3>
-                        <div class="exp-company">Learning Mode AI</div>
-                    </div>
-                    <div class="exp-date">March 2025 - May 2025</div>
-                </div>
-            </div>
-            <div class="exp-content">
-                <p>Conducted market research, analyzed competitors, and developed marketing strategies to enhance brand visibility and customer engagement for an AI-driven learning platform.</p>
-            </div>
-        </div>
+</div>
 
-        <div class="experience-item">
-            <div class="exp-header">
-                <div class="exp-logo">
-                    <img src="images/riipen.png" alt="Riipen Logo">
-                </div>
-                <div class="exp-title">
-                    <div class="exp-title-row">
-                        <h3>Software Engineer Intern</h3>
-                        <div class="exp-company">Riipen</div>
-                    </div>
-                    <div class="exp-date">January 2024 - April 2024</div>
-                </div>
-            </div>
-            <div class="exp-content">
-                <p>Developed and maintained web applications, collaborated with cross-functional teams to implement new features, and optimized performance for enhanced user experience.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="Projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-
-        <div class="project-card">
-            <div class="project-image">
-                <img src="images/cortex.png" alt="Cortex">
-            </div>
-            <div class="project-content">
-                <div class="project-header">
-                    <h3>Cortex</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/Devansh015/Cortex" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://cortex-frontend-rouge.vercel.app/" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <p class="project-description">A living 3D brain that visualizes CS knowledge. Upload GitHub repos, PDFs, or text and Cortex scores your skills across 51 categories using Google Gemini, maps them onto an interactive neural network, and offers AI-powered learning advice through a chatbot. Built for HackCanada 2026.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Next.js</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">Three.js</span>
-                    <span class="tech-tag">FastAPI</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Google Gemini</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image">
-                <img src="images/R2Detour.jpeg" alt="R2Detour">
-            </div>
-            <div class="project-content">
-                <div class="project-header">
-                    <h3>R2Detour</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/dharmp0/UTRA" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <p class="project-description">An autonomous line-following robot built at a robotics hackathon. Uses a custom PID controller with a 5-channel IR sensor array to navigate high-contrast tracks with smooth turns and smart intersection recovery.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Arduino</span>
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">PID</span>
-                    <span class="tech-tag">PlatformIO</span>
-                </div>
-            </div>
-        </div>
-
-         <div class="project-card">
-            <div class="project-image">
-                <img src="images/car-rental.png" alt="Car Rental System">
-            </div>
-            <div class="project-content">
-                <div class="project-header">
-                    <h3>Car Rental System</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/dharmp0/car-rental-app" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <p class="project-description">A full stack car rental platform that lets users browse vehicles, compare prices, create and manage reservations, and view rental activity, while providing admins with system wide reports for rentals, revenue, and cancellations.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">SQLite</span>
-                    <span class="tech-tag">REST API</span>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-image">
-                <img src="images/hawklifts.png" alt="HawkLifts Project">
-            </div>
-            <div class="project-content">
-                <div class="project-header">
-                    <h3>HawkLifts</h3>
-                </div>
-                <p class="project-description">A full-stack fitness platform that displays real-time gym occupancy to help students decide the best time to visit, while also supporting workout logging, nutrition tracking, and progress photo uploads.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">OpenAI API</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="project-card">
-            <div class="project-image">
-                <img src="images/commiter.png" alt="LeetCode to GitHub Commiter">
-            </div>
-            <div class="project-content">
-                <div class="project-header">
-                    <h3>LeetCode-to-GitHub Commiter</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/dharmp0/LeetCode-to-Github-Commiter" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <p class="project-description">A Python tool that connects to the LeetCode API to automatically fetch accepted solutions and push them to GitHub with chosen naming convention and file organization.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">GraphQL</span>
-                    <span class="tech-tag">GitHub</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="project-card">
-            <div class="project-image">
-                <img src="images/hospitaldatabase.png" alt="Hospital Database">
-            </div>
-            <div class="project-content">
-                <div class="project-header">
-                    <h3>Hospital Database</h3>
-                </div>
-                <p class="project-description">A comprehensive hospital management system with a relational database design, featuring patient records, staff management, and appointment scheduling.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">SQL</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="Certifications">
-    <h2>Certifications</h2>
-    <div class="certifications-carousel">
-        <div class="cert-nav">
-            <button class="cert-prev" onclick="changeCert(-1)">❮</button>
-            <button class="cert-next" onclick="changeCert(1)">❯</button>
-        </div>
-        <div class="cert-display">
-            <img id="certImage" src="images/JPMC-Cert-1.png" alt="Certification">
-            <div class="cert-dots">
-                <span class="dot active" onclick="currentCert(1)"></span>
-                <span class="dot" onclick="currentCert(2)"></span>
-                <span class="dot" onclick="currentCert(3)"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<footer class="site-footer">
-    <div class="footer">
-
-        <div class="copyright">
-            <p>Made by Dharm Patel © 2025</p>
-        </div>
-
-        <div class="top">
-            <p><a href=#About>Back to Top</a></p>
-        </div>
-
-    </div>
-</footer>
-
-
-<script src="./script.js"></script>
 </body>
 </html>
