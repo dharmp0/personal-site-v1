@@ -374,6 +374,10 @@ section h2 {
     padding: 0.25rem;
 }
 
+.project-link .fa-external-link-alt {
+    font-size: 1.3rem;
+}
+
 .project-link:hover {
     color: var(--accent);
 }
