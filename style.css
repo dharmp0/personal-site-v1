@@ -326,6 +326,9 @@ section {
 /* Footer */
 footer {
     padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
@@ -340,7 +343,6 @@ footer p {
     gap: 0.4rem;
     font-size: 0.8rem;
     color: var(--footer-text);
-    margin-left: 1rem;
 }
 
 .views-counter svg {
@@ -439,7 +441,5 @@ footer p {
 
     .views-counter {
         display: flex;
-        margin-left: 0;
-        margin-top: 0.25rem;
     }
 }
