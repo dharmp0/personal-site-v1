@@ -5,7 +5,7 @@ A simple, responsive portfolio built with **HTML**, **CSS**, and **JavaScript** 
 <img width="512" alt="image" src="images/website ui.png" />
 
 ## 🚀 Features
-- About Me + Experiences
+- About Me + Work Experience
 - Projects
 - Resume
 
