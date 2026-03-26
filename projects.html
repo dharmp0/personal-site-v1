@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<div class="cursor-dot"></div>
+<div class="cursor-trail"></div>
+
 <div class="container">
 
     <header>
@@ -20,6 +23,13 @@
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="./Dharm Patel S26.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    <path d="M12 7a5 5 0 0 1 0 10" fill="currentColor"/>
+                </svg>
+            </button>
         </nav>
     </header>
 
@@ -33,13 +43,12 @@
                 <img src="images/cortex.png" alt="Cortex" class="project-img">
                 <div class="project-info">
                     <div class="project-title-row">
-                        <h3>Cortex</h3>
+                        <h3>Cortex - HackCanada</h3>
                         <div class="project-icons">
                             <a href="https://github.com/Devansh015/Cortex" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                             <a href="https://cortex-frontend-rouge.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <p class="project-context">HackCanada 2026</p>
                     <p class="project-desc">A living 3D brain that visualizes CS knowledge. Upload GitHub repos, PDFs, or text and Cortex scores your skills across 51 categories using Google Gemini, maps them onto an interactive neural network, and offers AI-powered learning advice through a chatbot.</p>
                     <div class="project-tech">
                         <span>Next.js</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>FastAPI</span><span>Python</span><span>Google Gemini</span>
@@ -51,12 +60,11 @@
                 <img src="images/R2Detour.jpeg" alt="R2Detour" class="project-img">
                 <div class="project-info">
                     <div class="project-title-row">
-                        <h3>R2Detour</h3>
+                        <h3>R2Detour - UTRAHacks</h3>
                         <div class="project-icons">
                             <a href="https://github.com/dharmp0/UTRA" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <p class="project-context">UTRAHacks</p>
                     <p class="project-desc">An autonomous line-following robot that uses a custom PID controller with a 5-channel IR sensor array to navigate high-contrast tracks with smooth turns and smart intersection recovery.</p>
                     <div class="project-tech">
                         <span>Arduino</span><span>C++</span><span>PID</span><span>PlatformIO</span>
@@ -133,5 +141,8 @@
 
 </div>
 
+<script src="./script.js"></script>
+<script data-goatcounter="https://dharm.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

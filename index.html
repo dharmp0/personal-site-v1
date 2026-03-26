@@ -9,7 +9,10 @@
     <link rel="icon" href="./images/website_icon.webp">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body data-page="home">
+
+<div class="cursor-dot"></div>
+<div class="cursor-trail"></div>
 
 <div class="container">
 
@@ -19,6 +22,13 @@
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="./Dharm Patel S26.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    <path d="M12 7a5 5 0 0 1 0 10" fill="currentColor"/>
+                </svg>
+            </button>
         </nav>
     </header>
 
@@ -41,12 +51,12 @@
         <section class="experience">
             <h2>Experience</h2>
             <ul>
-                <li><span class="exp-left"><span class="exp-company">RBC</span> - Software Engineer Intern</span> <em>Incoming Summer 2026</em></li>
-                <li><span class="exp-left"><span class="exp-company">Manulife</span> - Software Engineer Intern</span> <em>Jan 2026 - Present</em></li>
-                <li><span class="exp-left"><span class="exp-company">Wilfrid Laurier University</span> - Research Assistant</span> <em>Sep 2025 - Dec 2025</em></li>
-                <li><span class="exp-left"><span class="exp-company">Sentia Solutions</span> - Business Development Representative</span> <em>May 2025 - Aug 2025</em></li>
-                <li><span class="exp-left"><span class="exp-company">Learning Mode AI</span> - Growth Intern</span> <em>Mar 2025 - May 2025</em></li>
-                <li><span class="exp-left"><span class="exp-company">Riipen</span> - Software Engineer Intern</span> <em>Jan 2024 - Apr 2024</em></li>
+                <li><img src="images/rbc.png" alt="RBC" class="company-logo" onerror="this.style.display='none'"><span class="exp-left"><span class="exp-company">RBC</span> - Software Engineer Intern</span> <em>Incoming Summer 2026</em></li>
+                <li><img src="images/manulife.png" alt="Manulife" class="company-logo" onerror="this.style.display='none'"><span class="exp-left"><span class="exp-company">Manulife</span> - Software Engineer Intern</span> <em>Jan 2026 - Present</em></li>
+                <li><img src="images/laurier.avif" alt="Wilfrid Laurier University" class="company-logo" onerror="this.style.display='none'"><span class="exp-left"><span class="exp-company">Wilfrid Laurier University</span> - Research Assistant</span> <em>Sep 2025 - Dec 2025</em></li>
+                <li><img src="images/sentia.svg" alt="Sentia Solutions" class="company-logo" onerror="this.style.display='none'"><span class="exp-left"><span class="exp-company">Sentia Solutions</span> - Business Development Representative</span> <em>May 2025 - Aug 2025</em></li>
+                <li><img src="images/learningmode.jpg" alt="Learning Mode AI" class="company-logo" onerror="this.style.display='none'"><span class="exp-left"><span class="exp-company">Learning Mode AI</span> - Growth Intern</span> <em>Mar 2025 - May 2025</em></li>
+                <li><img src="images/riipen.png" alt="Riipen" class="company-logo" onerror="this.style.display='none'"><span class="exp-left"><span class="exp-company">Riipen</span> - Software Engineer Intern</span> <em>Jan 2024 - Apr 2024</em></li>
             </ul>
         </section>
 
@@ -64,10 +74,13 @@
     <hr>
 
     <footer>
-        <p>&copy; 2026 Dharm Patel</p>
+        <p>&copy; 2026 Dharm Patel<span class="views-counter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span id="view-count"></span></p>
     </footer>
 
 </div>
 
+<script src="./script.js"></script>
+<script data-goatcounter="https://dharm.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
