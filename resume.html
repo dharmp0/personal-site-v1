@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dharm Patel">
+    <meta name="description" content="Resume - Dharm Patel">
+    <title>Resume - Dharm Patel</title>
+    <link rel="icon" href="./images/website_icon.webp">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-trail"></div>
+
+<div class="container resume-container">
+
+    <header>
+        <div class="header-name">Dharm Patel</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    <path d="M12 7a5 5 0 0 1 0 10" fill="currentColor"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section class="resume-intro">
+            <h2>Resume</h2>
+            <p class="resume-description">My experience, skills, and qualifications.</p>
+            <div class="resume-actions">
+                <a href="./Dharm Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    View Resume
+                </a>
+                <a href="./Dharm Resume.pdf" download class="resume-btn resume-btn-outline">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download PDF
+                </a>
+            </div>
+        </section>
+
+        <section class="resume-viewer">
+            <iframe src="./Dharm Resume.pdf" title="Dharm Patel Resume"></iframe>
+            <p class="resume-fallback">Unable to display PDF. <a href="./Dharm Resume.pdf" target="_blank" rel="noopener noreferrer">Open resume directly</a>.</p>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Dharm Patel</p>
+        <span class="views-counter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span id="view-count"></span></span>
+    </footer>
+
+</div>
+
+<script src="./script.js"></script>
+<script data-goatcounter="https://dharm.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
