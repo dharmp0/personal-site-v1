@@ -439,6 +439,30 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.webring-widget {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.webring-widget a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.webring-widget a:hover {
+    opacity: 0.6;
 }
 
 footer p {

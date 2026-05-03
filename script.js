@@ -14,8 +14,29 @@
             const next = current === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
+            updateWebringIcon();
         });
     });
+})();
+
+// ===== Webring Icon Theme Sync =====
+(function () {
+    function updateWebringIcon() {
+        const webringIcon = document.getElementById('webring-icon');
+        if (!webringIcon) return;
+        
+        const theme = document.documentElement.getAttribute('data-theme');
+        const isDark = theme === 'dark';
+        webringIcon.src = isDark 
+            ? 'https://wluring.com/icon.white.svg' 
+            : 'https://wluring.com/icon.black.svg';
+    }
+
+    // Update on page load
+    document.addEventListener('DOMContentLoaded', updateWebringIcon);
+    
+    // Make it globally available for theme toggle
+    window.updateWebringIcon = updateWebringIcon;
 })();
 
 // ===== Custom Cursor =====
