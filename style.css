@@ -286,6 +286,14 @@ section {
     margin-bottom: 0.75rem;
 }
 
+.project-img-oneride {
+    object-position: center top;
+}
+
+.project-img-maboko {
+    object-position: center 18%;
+}
+
 .project-title-row {
     display: flex;
     justify-content: space-between;
