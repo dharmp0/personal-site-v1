@@ -46,23 +46,47 @@
     const dot = document.querySelector('.cursor-dot');
     const trail = document.querySelector('.cursor-trail');
     if (!dot || !trail) return;
+    const resumeViewer = document.querySelector('.resume-viewer iframe');
 
     let mouseX = -100, mouseY = -100;
     let trailX = -100, trailY = -100;
+    let cursorVisible = true;
+
+    function setCursorVisible(visible) {
+        if (cursorVisible === visible) return;
+        cursorVisible = visible;
+        dot.style.opacity = visible ? '1' : '0';
+        trail.style.opacity = visible ? '1' : '0';
+    }
 
     document.addEventListener('mousemove', function (e) {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        dot.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px)';
+        if (cursorVisible) {
+            dot.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px)';
+        }
     });
 
     function animateTrail() {
-        trailX += (mouseX - trailX) * 0.15;
-        trailY += (mouseY - trailY) * 0.15;
-        trail.style.transform = 'translate(' + trailX + 'px, ' + trailY + 'px)';
+        if (cursorVisible) {
+            trailX += (mouseX - trailX) * 0.15;
+            trailY += (mouseY - trailY) * 0.15;
+            trail.style.transform = 'translate(' + trailX + 'px, ' + trailY + 'px)';
+        }
         requestAnimationFrame(animateTrail);
     }
     animateTrail();
+
+    if (resumeViewer) {
+        resumeViewer.addEventListener('mouseenter', function () {
+            setCursorVisible(false);
+        });
+
+        resumeViewer.addEventListener('mouseleave', function () {
+            setCursorVisible(true);
+            dot.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px)';
+        });
+    }
 
     // Hover effect on interactive elements
     document.addEventListener('mouseover', function (e) {
@@ -80,12 +104,10 @@
 
     // Hide cursor when it leaves the window
     document.addEventListener('mouseleave', function () {
-        dot.style.opacity = '0';
-        trail.style.opacity = '0';
+        setCursorVisible(false);
     });
     document.addEventListener('mouseenter', function () {
-        dot.style.opacity = '1';
-        trail.style.opacity = '1';
+        setCursorVisible(true);
     });
 })();
 
