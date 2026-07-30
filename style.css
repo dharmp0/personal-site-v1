@@ -157,6 +157,10 @@ section {
 }
 
 /* About list */
+.about {
+    margin-bottom: 1.5rem;
+}
+
 .about ul {
     list-style: none;
     padding-left: 0;
@@ -357,7 +361,6 @@ section {
 }
 
 .resume-intro {
-    text-align: center;
     margin-bottom: 2rem;
 }
 
@@ -369,7 +372,7 @@ section {
 
 .resume-actions {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
 }
 
