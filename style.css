@@ -276,14 +276,14 @@ button:focus-visible {
 }
 
 .exp-company {
-    color: var(--text-heading);
-    font-weight: 600;
-    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
 }
 
 .exp-role {
-    color: var(--text-secondary);
-    font-size: 0.88rem;
+    color: var(--text-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .experience em {
