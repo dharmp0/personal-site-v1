@@ -549,29 +549,6 @@ footer {
     position: relative;
 }
 
-.webring-widget {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.webring-widget a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text);
-    text-decoration: none;
-    transition: opacity 0.2s;
-}
-
-.webring-widget a:hover {
-    opacity: 0.6;
-}
-
 footer p {
     font-size: 0.8rem;
     color: var(--footer-text);
@@ -662,28 +639,35 @@ footer p {
     }
 
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    nav {
-        gap: 1rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
         flex-wrap: wrap;
     }
 
+    nav {
+        gap: 0.9rem;
+        flex-wrap: wrap;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
     .experience li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.15rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     .experience li .company-logo {
-        display: none;
+        display: block;
+        width: 32px;
+        height: 32px;
     }
 
     .experience em {
         font-size: 0.85rem;
+        align-self: center;
+        margin-top: 0;
     }
 
     .project-img {
@@ -700,13 +684,18 @@ footer p {
     }
 
     footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    footer p {
+        flex: 1;
     }
 
     .views-counter {
-        display: flex;
+        display: inline-flex;
+        margin-left: auto;
+        white-space: nowrap;
     }
 }
 
