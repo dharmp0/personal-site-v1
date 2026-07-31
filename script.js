@@ -46,6 +46,7 @@
     const dot = document.querySelector('.cursor-dot');
     const trail = document.querySelector('.cursor-trail');
     if (!dot || !trail) return;
+    document.body.classList.add('custom-cursor-active');
     const resumeViewer = document.querySelector('.resume-viewer iframe');
 
     let mouseX = -100, mouseY = -100;

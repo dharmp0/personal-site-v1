@@ -4,7 +4,7 @@
     --text: #232a26;
     --text-heading: #171d1a;
     --text-secondary: #3c453f;
-    --text-muted: #7c847d;
+    --text-muted: #5a615b;
     --text-subtle: #5b6360;
     --accent: #1f5f4a;
     --accent-muted: #4a6b5e;
@@ -12,7 +12,7 @@
     --card-border: #e2e4de;
     --tag-bg: #e6e8e1;
     --footer-text: #9aa19b;
-    --icon-color: #8f978f;
+    --icon-color: #5f665f;
     --cursor-dot: #1f5f4a;
     --cursor-trail: rgba(31, 95, 74, 0.15);
 }
@@ -23,7 +23,7 @@
     --text: #dce3de;
     --text-heading: #eef2ee;
     --text-secondary: #b7c2ba;
-    --text-muted: #6f7a72;
+    --text-muted: #94a09a;
     --text-subtle: #8a958c;
     --accent: #4ea88a;
     --accent-muted: #6f9284;
@@ -31,7 +31,7 @@
     --card-border: #202924;
     --tag-bg: #202924;
     --footer-text: #5a635c;
-    --icon-color: #647069;
+    --icon-color: #8b968e;
     --cursor-dot: #4ea88a;
     --cursor-trail: rgba(78, 168, 138, 0.15);
 }
@@ -86,7 +86,9 @@ body {
     top: 3rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     line-height: 1;
     color: var(--accent);
     background-color: var(--bg);
@@ -123,6 +125,7 @@ nav {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    margin-left: auto;
 }
 
 nav a {
@@ -179,11 +182,6 @@ h1 {
     margin-bottom: 0.25rem;
 }
 
-body[data-page="home"] h1::before {
-    content: '> ';
-    color: var(--accent);
-}
-
 .subtitle {
     color: var(--accent-muted);
     font-size: 0.95rem;
@@ -197,11 +195,23 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
 }
 
 section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
+    position: relative;
+}
+
+a,
+button {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 3px;
 }
 
 /* About list */
@@ -218,6 +228,7 @@ section {
     font-size: 0.95rem;
     color: var(--text-secondary);
     margin-bottom: 0.35rem;
+    padding: 0.2rem 0;
 }
 
 .about li::before {
@@ -234,10 +245,18 @@ section {
 .experience li {
     font-size: 0.95rem;
     color: var(--text-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.experience li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .company-logo {
@@ -323,11 +342,24 @@ section {
     margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--card-border);
     padding-bottom: 1.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .projects .project-card:last-child {
     border-bottom: none;
     padding-bottom: 0;
+}
+
+.projects .project-card:hover,
+.projects .project-card:focus-within {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(31, 95, 74, 0.08);
+}
+
+[data-theme="dark"] .projects .project-card:hover,
+[data-theme="dark"] .projects .project-card:focus-within {
+    box-shadow: 0 2px 10px rgba(78, 168, 138, 0.16);
 }
 
 .project-img {
@@ -336,6 +368,12 @@ section {
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 0.75rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.projects .project-card:hover .project-img,
+.projects .project-card:focus-within .project-img {
+    transform: scale(1.01);
 }
 
 .project-img-oneride {
@@ -368,11 +406,13 @@ section {
     color: var(--icon-color);
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
 }
 
-.project-icons a:hover {
+.project-icons a:hover,
+.project-icons a:focus-visible {
     color: var(--accent);
+    transform: translateY(-1px);
 }
 
 .project-context {
@@ -436,7 +476,7 @@ section {
     padding: 0.6rem 1.4rem;
     border-radius: 4px;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     background: var(--accent);
     color: var(--bg);
 }
@@ -447,8 +487,16 @@ section {
     flex-shrink: 0;
 }
 
-.resume-btn:hover {
-    opacity: 0.88;
+.resume-btn:hover,
+.resume-btn:focus-visible {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(31, 95, 74, 0.14);
+}
+
+[data-theme="dark"] .resume-btn:hover,
+[data-theme="dark"] .resume-btn:focus-visible {
+    box-shadow: 0 2px 10px rgba(78, 168, 138, 0.18);
 }
 
 .resume-btn-outline {
@@ -457,7 +505,8 @@ section {
     border: 1px solid var(--accent);
 }
 
-.resume-btn-outline:hover {
+.resume-btn-outline:hover,
+.resume-btn-outline:focus-visible {
     background: var(--accent);
     color: var(--bg);
     opacity: 1;
@@ -476,7 +525,6 @@ section {
 }
 
 .resume-fallback {
-    display: none;
     font-size: 0.85rem;
     color: var(--text-muted);
     text-align: center;
@@ -594,11 +642,11 @@ footer p {
     }
 }
 
-/* Only hide default cursor on non-touch devices */
+/* Only hide default cursor on non-touch devices, and only once the custom cursor script has actually attached */
 @media (pointer: fine) {
-    body,
-    a,
-    button {
+    body.custom-cursor-active,
+    body.custom-cursor-active a,
+    body.custom-cursor-active button {
         cursor: none;
     }
 }
